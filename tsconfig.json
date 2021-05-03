@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Node 12",
+
+  "compilerOptions": {
+    "lib": ["DOM", "ES6"],
+    "module": "ESNext",
+    "sourceMap": true,
+    "target": "es6",
+    "jsx": "react",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "preserveConstEnums": true,
+    "typeRoots": ["node_modules/@types"],
+    "types": ["react", "react-dom", "webpack", "tapable"]
+  },
+  "files": ["dist/main.tsx"],
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}
