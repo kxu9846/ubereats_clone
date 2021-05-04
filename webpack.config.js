@@ -4,7 +4,7 @@ const mode =
 
 module.exports = {
   mode: mode,
-  entry: "./dist/main.ts",
+  entry: "./dist/main.tsx",
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "public"),
