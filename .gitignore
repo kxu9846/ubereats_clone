@@ -7,3 +7,5 @@ webpack.config.js
 package-lock.json
 main.js
 main.js.map
+public/bundle.js
+public/bundle.js.map
