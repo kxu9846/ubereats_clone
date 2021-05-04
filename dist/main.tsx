@@ -1,4 +1,4 @@
-const app = document.querySelector("#App")!;
+const app = document.querySelector("#App") as HTMLTextAreaElement;
 
 type MyProps = {
   message: string;
