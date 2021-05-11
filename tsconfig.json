@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Node 12",
+
+  "compilerOptions": {
+    "outDir": "src/components",
+    "lib": ["DOM", "ES6"],
+    "module": "ESnext",
+    "sourceMap": true,
+    "target": "es6",
+    "jsx": "react",
+    // "allowJs": true,
+    "moduleResolution": "node",
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "allowUmdGlobalAccess": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "preserveConstEnums": true,
+    "typeRoots": ["node_modules/@types"],
+    "types": ["react", "react-dom", "webpack", "tapable"]
+  },
+  "files": ["src/components/SearchBar.tsx"],
+  "include": [],
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}

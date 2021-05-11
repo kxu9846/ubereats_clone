@@ -1,11 +1,5 @@
-.storybook
 node_modules
-src
-tsconfig.json
 webpack.config.js
 .babelrc
-package-lock.json
-main.js
-main.js.map
 public/bundle.js
 public/bundle.js.map

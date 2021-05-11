@@ -1,21 +1,16 @@
 const app = document.querySelector("#App")!;
 
-type MyProps = {
-  message: string;
-};
-type MyState = {
+import React from "react";
+import ReactDOM from "react-dom";
+
+export type SearchBarProps = {
   [key: string]: string;
 };
-class App extends React.Component<MyProps, MyState> {
-  constructor(props: MyProps) {
-    super(props);
-    this.state = {
-      inputValue: "Search..",
-      dropDownValue: "Deliver now",
-    };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
+export class SearchBar extends React.Component<SearchBarProps> {
+  state: SearchBarProps = {
+    inputValue: "Search..",
+    dropDownValue: "Deliver now",
+  };
 
   handleChange = (event: any) => {
     event.preventDefault();
@@ -34,17 +29,17 @@ class App extends React.Component<MyProps, MyState> {
   render() {
     return (
       <div>
-        <form id="search-bar" onSubmit={this.handleSubmit}>
+        <form id="search-bar" onSubmit={this.handleSubmit.bind(this)}>
           <input
             type="text"
             name="inputValue"
             value={this.state.inputValue}
-            onChange={this.handleChange}
+            onChange={this.handleChange.bind(this)}
           />
           <select
             name="dropDownValue"
             value={this.state.dropDownValue}
-            onChange={this.handleChange}
+            onChange={this.handleChange.bind(this)}
           >
             <option value="deliver_now">Deliver now</option>
             <option value="schedule_for_later">Schedule for later</option>
@@ -56,4 +51,4 @@ class App extends React.Component<MyProps, MyState> {
   }
 }
 
-ReactDOM.render(React.createElement(App), app);
+ReactDOM.render(React.createElement(SearchBar), app);
